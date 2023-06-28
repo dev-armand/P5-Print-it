@@ -2,7 +2,6 @@ const slides = [
 	{
 		"image":"./assets/images/slideshow/slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>",
-		"divClass":"dot-selected",
 	},
 	{
 		"image":"./assets/images/slideshow/slide2.jpg",
@@ -79,4 +78,3 @@ nextButton.addEventListener("click", nextSlide);
 
 // Show the initial slide
 showSlide(currentSlide);
-
