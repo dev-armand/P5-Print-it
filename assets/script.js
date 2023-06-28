@@ -79,3 +79,4 @@ nextButton.addEventListener("click", nextSlide);
 
 // Show the initial slide
 showSlide(currentSlide);
+
