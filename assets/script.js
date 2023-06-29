@@ -17,18 +17,6 @@ const slides = [
 	}
 ]
 
-// Event listener for arrows
-const arrowLeft = document.querySelector(".arrow_left")
-
-arrowLeft.addEventListener('click', e => {
-	console.log("left-arrow")
-})
-
-const arrowRight = document.querySelector(".arrow_right")
-
-arrowRight.addEventListener('click', e => {
-	console.log('right-arrow')
-})
 
 /********************************* */
 
@@ -39,6 +27,7 @@ const tagLineElement = document.querySelector(".carousel-tagline");
 const prevButton = document.querySelector(".arrow_left");
 const nextButton = document.querySelector(".arrow_right");
 
+// Function to show the slide
 function showSlide(slideIndex) {
   const slide = slides[slideIndex];
   imageElement.src = slide.image;
@@ -57,24 +46,29 @@ function showSlide(slideIndex) {
 		}
 }
 
+// Function to selecte the next slide
 function nextSlide() {
   currentSlide++;
   if (currentSlide >= slides.length) {
     currentSlide = 0;
   }
   showSlide(currentSlide);
+	console.log("next slide")
 }
 
+// Function to select the previous slide
 function prevSlide() {
   currentSlide--;
   if (currentSlide < 0) {
     currentSlide = slides.length - 1;
   }
   showSlide(currentSlide);
+	console.log("previous slide")
 }
 
-prevButton.addEventListener("click", prevSlide);
-nextButton.addEventListener("click", nextSlide);
+// Event listener for arrows
+prevButton.addEventListener("click", prevSlide)
+nextButton.addEventListener("click", nextSlide)
 
 // Show the initial slide
 showSlide(currentSlide);
